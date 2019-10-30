@@ -1,0 +1,18 @@
+minimum_cumulusci_version: '3.0.2'
+project:
+    name: apex-toolingapi
+    package:
+        name:  apex-toolingapi
+        api_version: '46.0'
+
+tasks:
+    robot:
+        options:
+            suites: robot/apex-toolingapi/tests
+            options:
+                outputdir: robot/apex-toolingapi/results
+
+    robot_testdoc:
+        options:
+            path: robot/apex-toolingapi/tests
+            output: robot/apex-toolingapi/doc/apex-toolingapi_tests.html

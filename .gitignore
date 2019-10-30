@@ -1,26 +1,23 @@
-*.sublime-build
+# Salesforce / SFDX / CCI
+.cci
+.sfdx
+/src.orig
+/force-app
+
+# Python
+*.pyc
+__pycache__
+
+# Robot Framework results
+robot/apex-toolingapi/results/
+
+# Editors
+*.sublime-project
 *.sublime-workspace
-.DS_Store
+.vscode
+.idea
 .project
-.settings/
-.sublime-project
-.tm_properties
-Referenced Packages/
-build.properties
-buildx.xml
-config/
-salesforce.schema
-target/
-temp/
+.settings
 
-apex-toolingapi/.settings/
-apex-toolingapi/Referenced Packages/
-apex-toolingapi/salesforce.schema
-apex-toolingapi/.DS_Store
-apex-toolingapi/.project
-
-apex-toolingapi.sublime-project
-
-apex-toolingapi.sublime-settings
-
-apex-scripts/log/2014-07-08-00.29.57.log
+# Misc
+.DS_Store
