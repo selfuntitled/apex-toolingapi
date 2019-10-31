@@ -1,37 +1,12 @@
-Apex Tooling API - REST edition
-================
+# apex-toolingapi
 
-<a href="https://githubsfdeploy.herokuapp.com?owner=afawcett&repo=apex-toolingapi%2Ftree%2Fapex-toolingapi-rest">
-  <img alt="Deploy to Salesforce"
-       src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/src/main/webapp/resources/img/deploy.png">
-</a>
+Add a brief description of this project here, in Markdown format.
+It will be shown on the main page of the project's GitHub repository.
 
-**Reference Blogs**
+## Development
 
-- [Going Native with the Apex UML Tool and Tooling API](http://andyinthecloud.com/2014/03/17/going-native-with-the-apex-uml-tool-and-tooling-api/)
-- [Querying Custom Object and Field IDs via Tooling API](http://andyinthecloud.com/2014/01/05/querying-custom-object-and-field-ids-via-tooling-api/)
+To work on this project in a scratch org:
 
-**NOTE:** This API is work in progress.
-
-Known Issues and Gotchas
-========================
-
-- **INVALID_SESSION_ID** error message, thanks to [rdehler](https://github.com/rdehler) for spotting this one, see [here]( http://help.salesforce.com/HTViewSolution?id=000187092&language=en_US) for how to resolve this.
-
-Current Thinking and Strategy
-=============================
-
-There are two flavours of the Tooling API Salesforce provides, one in SOAP and another via REST. Unlike the strategy with the Apex Metadata API wrapper, the SOAP API is not compatible with Apex due to its exenstive use of polymorphic XML (e.g. xsi:type), especially in the SymbolTable type. For this reason this wrapper is focusing on the REST API, though may dip into the SOAP API depending on respective functionality.
-
-The SOAP types have been used as a starting point for the REST types and are still being scrubbed and cleaned up. There is some initial ideas on how to get the query operation working which you can read more about in the above blog. The other motivation behind using the SOAP types was to try and use a diff of the XML Schema types each release to drive what changes are needed to keep the Apex types in sync (since the documentation does not always go into this much detail).
-
-Contributors
-============
-
- - [James Loghry](https://twitter.com/dancinllama)
- - [Andrew Fawcett](https://twitter.com/andyinthecloud)
- 
-TODO List
-=========
-
-Our current TODO list is being managed via [GitHub Issues](https://github.com/afawcett/apex-toolingapi/issues)
+1. [Set up CumulusCI](https://cumulusci.readthedocs.io/en/latest/tutorial.html)
+2. Run `cci flow run dev_org --org dev` to deploy this project.
+3. Run `cci org browser dev` to open the org in your browser.
